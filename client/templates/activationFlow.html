@@ -1,0 +1,11 @@
+<template name="activationFlow">
+  {{#unless areWordsSelected}}
+    {{> selectWords publicKey=publicKey selectedWords=selectedWords words=words wordsSelected=wordsSelected}}
+  {{else}}
+    {{#unless areWordsConfirmed}}
+      {{>confirmWords publicKey=publicKey selectedWords=selectedWords words=words wordsConfirmed=wordsConfirmed}}
+    {{else}}
+      {{> confirmActivation activated=activated}}
+    {{/unless}}
+  {{/unless}}
+</template>

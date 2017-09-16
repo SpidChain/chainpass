@@ -6,6 +6,11 @@
   },
   "dependencies": {
     "babel-runtime": "^6.20.0",
-    "meteor-node-stubs": "~0.2.4"
+    "bip39": "^2.4.0",
+    "bitcoinjs-lib": "^3.1.1",
+    "buffer": "^5.0.7",
+    "meteor-node-stubs": "~0.2.4",
+    "simpl-schema": "^0.3.2",
+    "underscore": "^1.8.3"
   }
 }

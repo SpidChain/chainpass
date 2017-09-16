@@ -1,0 +1,33 @@
+<template name="selectWords">
+  <div id="selectWords">
+    <div class="child">
+      <div class="txt">
+        Inserisci il codice che ti abbiamo inviato tramite SMS
+      </div>
+
+      <div class="words row">
+        {{#each word in words}}
+        {{> wordButton index=@index word=word selectedWords=selectedWords}}
+        {{/each}}
+      </div>
+
+      <button type="button" class="btn btn-success form-control btnNext js-next" >
+        Conferma
+      </button>
+
+      <div id="selectedWords">
+        {{#if selectedWords.word1}}
+          {{selectedWords.word1.index}}
+          value: {{selectedWords.word1.value}}
+          word: {{selectedWords.word1.word}}
+        {{/if}}
+
+        {{#if selectedWords.word2}}
+          {{selectedWords.word2.index}}
+          value: {{selectedWords.word2.value}}
+          word: {{selectedWords.word2.word}}
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,7 @@
+<template name='isActivated'>
+  {{#if isActivated}}
+    {{> Template.contentBlock}}
+  {{else}}
+    {{> activationFlow activated=activated}}
+  {{/if}}
+</template>

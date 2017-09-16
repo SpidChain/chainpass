@@ -1,5 +1,8 @@
 <template name="main">
-  {{#isActivated}}
-    Benvenuto
-  {{/isActivated}}
+  <div class="container-fluid">
+    {{#isActivated}}
+      <a class="btn btn-primary" href="http://www.trenitalia.com/" target="_blank">Compra biglietto</a>
+      <button class="btn btn-primary">Scannerizza biglietto</button>
+    {{/isActivated}}
+  </div>
 </template>

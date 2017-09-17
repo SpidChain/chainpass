@@ -2,7 +2,11 @@
   <div id="selectWords">
     <div class="child">
       <div class="txt">
-        Seleziona due parole per attivare il tuo App-Token
+
+        <p style="background:#afafaf;padding:10px;text-align:center;font-size:18px;">
+          <i class="fa fa-edit"></i>
+          Seleziona due parole per attivare il tuo App-Token
+        </p>
       </div>
 
       <div class="words row">
@@ -11,10 +15,11 @@
         {{/each}}
       </div>
 
-      <button type="button" class="btn btn-success form-control btnNext js-next" >
-        Conferma
-      </button>
-
+      <div style="margin-top:10px;">
+        <button type="button" class="btn btn-success form-control btnNext js-next" >
+          Conferma
+        </button>
+      </div>
       <div id="selectedWords">
         {{#if selectedWords.word1}}
           {{selectedWords.word1.index}}

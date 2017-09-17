@@ -53,11 +53,7 @@
     </div>
   </nav>
   <div class="container-fluid maincontainer">
-    <div class="container">
-      {{#isActivated}}
-        <a class="btn btn-primary" href="http://www.trenitalia.com/" target="_blank">Compra biglietto</a>
-        <button class="btn btn-primary" id="scan">Scannerizza biglietto</button>
-      {{/isActivated}}
-    </div>
+    {{>Template.dynamic template=content}}
+    
   </div>
 </template>

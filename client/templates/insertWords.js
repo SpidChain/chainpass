@@ -60,11 +60,6 @@ Template.insertWords.helpers({
     }
   }),
 
-  w1:() =>{
-    Session.get("w1")
-  },
-  w2:() =>{
-    Session.get("w2")
-  }
-
+  w1: () => Session.get('w1'),
+  w2: () => Session.get('w2')
 })

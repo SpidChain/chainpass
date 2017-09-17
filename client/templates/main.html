@@ -1,4 +1,57 @@
 <template name="main">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+
+      <div class="navbar-header navbar-left pull-left">
+        <a href="/" data-wow-iteration="3" data-wow-duration="0.05" class="wow pulse navbar-brand animated" style="visibility: visible; animation-iteration-count: 3; animation-name: pulse;">
+          <img src="/Chainpass-Logo.png" style="height: 100%;">
+        </a>
+      </div>
+
+
+
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="active">
+            <a href="/">
+              <i class="fa fa-home"></i>
+              Home
+            </a>
+          </li>
+          <!--
+          <li class="{{isActiveRoute name='about'}}">
+            <a href="/about">
+              <i class="fa fa-coffee"></i>
+              {{_ "About"}}
+            </a>
+          </li>
+          -->
+          <li>
+            <a href="/contact">
+              <i class="fa fa-handshake-o"></i>
+              Contact
+            </a>
+          </li>
+          <li>
+            <a href="https://medium.com/@ico_land" target="_blank">
+              <i class="fa fa-link"></i>
+              Blog
+            </a>
+          </li>
+
+
+
+
+        </ul>
+        <!--
+        <ul class="nav navbar-nav navbar-right">
+
+
+        </ul>
+        -->
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
   <div class="container-fluid">
     {{#isActivated}}
       <a class="btn btn-primary" href="http://www.trenitalia.com/" target="_blank">Compra biglietto</a>

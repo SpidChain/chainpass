@@ -11,7 +11,7 @@ FineRouter.route('/scanTicket', {
   name: 'scanTicket'
 })
 
-FineRouter.route('/ticketInfo', {
+FineRouter.route('/ticketInfo/:ticketId', {
   action: () => FineBlazeLayout.render('main', {content: "ticketInfo"}),
   name: 'ticketInfo'
 })

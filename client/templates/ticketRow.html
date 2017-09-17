@@ -1,0 +1,46 @@
+<template name="ticketRow">
+  <div class="preCheckin" style="background:#efefef;border-bottom:2px solid #cfcfcf;margin-top:5px;padding:3px;font-size:12px;">
+    <div class="row " style="padding:5px;">
+      <div class="col-xs-6 text-left" style="line-height: 24px;">
+
+        Destinazione:<br>
+        <i class="fa fa-train"></i>
+        {{ticket.to}}
+      </div>
+      <div class="col-xs-6 text-right" style="line-height: 24px;">
+
+        Orario di partenza:<br>
+        <i class="fa fa-clock-o"></i>
+        {{ticket.departsAt}}
+      </div>
+    </div>
+    <div class="row" style="margin-top:3px;border-top:1px dashed #ffffff;padding:5px;">
+      <div class="col-xs-6 text-left" style="line-height: 24px;">
+
+        Stazione di partenza:<br>
+        <i class="fa fa-train"></i>
+        {{ticket.from}}
+      </div>
+      <div class="col-xs-6 text-right" style="line-height: 24px;">
+
+        Orario di arrivo:<br>
+        <i class="fa fa-clock-o"></i>
+        {{ticket.arrivesAt}}
+      </div>
+
+      {{#if ticket.checkIn}}
+        <div class="row" style="padding:5px;">
+          <div class="col-xs-12 text-center" >
+            <div class="text-center" style="background:#ffffcc">
+              <i class="fa fa-warning"></i>
+              checkIn effettuato per questo viaggio !!!
+            </div>
+
+          </div>
+        </div>
+      {{/if}}
+    </div>
+
+
+  </div>
+</template>

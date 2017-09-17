@@ -13,9 +13,5 @@ Template.preCheckin.helpers({
 });
 
 Template.preCheckin.events({
-  "click .preCheckin": function(event, template){
-    event.preventDefault()
-    FineRouter.go("checkIn")
-
-  }
+  
 });

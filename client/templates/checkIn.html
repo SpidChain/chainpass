@@ -2,10 +2,17 @@
   <div class="container">
     {{#isActivated}}
       {{#if searching}}
-        <p>In attesa di connessione WiFi</p>
+        <p style="background:#ffffcc;padding:10px;text-align:center;font-size:18px;">
+          <i class="fa fa-wifi"></i>
+          In attesa di connessione WiFi
+        </p>
         {{> spinner}}
       {{else}}
-        WiFi trovato
+
+        <p style="background:#b5d6b5;padding:10px;text-align:center;font-size:18px;">
+          <i class="fa fa-wifi"></i>
+          WiFi trovato!
+        </p>
         {{> insertWords}}
       {{/if}}
     {{/isActivated}}

@@ -5,36 +5,7 @@
     <br>
   </p>
   {{#each ticket in tickets}}
-  <div class="preCheckin" style="background:#efefef;border-bottom:2px solid #cfcfcf;margin-top:5px;padding:3px;font-size:12px;">
-    <div class="row " style="padding:5px;">
-      <div class="col-xs-6 text-left" style="line-height: 24px;">
-
-        Destinazione:<br>
-        <i class="fa fa-train"></i>
-        {{ticket.to}}
-      </div>
-      <div class="col-xs-6 text-right" style="line-height: 24px;">
-
-        Orario di partenza:<br>
-        <i class="fa fa-clock-o"></i>
-        {{ticket.departsAt}}
-      </div>
-    </div>
-    <div class="row" style="margin-top:3px;border-top:1px dashed #ffffff;padding:5px;">
-      <div class="col-xs-6 text-left" style="line-height: 24px;">
-
-        Stazione di partenza:<br>
-        <i class="fa fa-train"></i>
-        {{ticket.from}}
-      </div>
-      <div class="col-xs-6 text-right" style="line-height: 24px;">
-
-        Orario di arrivo:<br>
-        <i class="fa fa-clock-o"></i>
-        {{ticket.arrivesAt}}
-      </div>
-    </div>
-  </div>
+  {{>ticketRow ticket=ticket}}
 
 
 

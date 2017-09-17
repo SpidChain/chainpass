@@ -28,6 +28,10 @@ Template.selectWords.events({
 
     if (_.isObject(word1) && _.isString(word1.word) &&
       _.isObject(word2) && _.isString(word2.word)) {
+
+        Session.set("w1",word1.word)
+        Session.set("w2",word2.word)
+
       Template.currentData().wordsSelected.set('true')
     } else {
       Bert.alert({

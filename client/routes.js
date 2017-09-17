@@ -25,3 +25,9 @@ FineRouter.route('/checkInDone', {
   action: () => FineBlazeLayout.render('main', {content: 'checkInDone'}),
   name: 'checkInDone'
 })
+
+
+FineRouter.route('/preCheckin', {
+  action: () => FineBlazeLayout.render('main', {content: 'preCheckin'}),
+  name: 'preCheckin'
+})

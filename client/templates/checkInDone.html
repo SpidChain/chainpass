@@ -2,9 +2,9 @@
   <div class="container">
     {{#isActivated}}
       {{#if greeting}}
-        CHECKIN EFFETTUATO
+        {{>spinner}}
       {{else}}
-        bla bla
+        {{> scanTicket2}}
       {{/if}}
     {{/isActivated}}
   </div>

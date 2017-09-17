@@ -1017,7 +1017,7 @@ const ticketArray = [
 
 Template.scanTicket.onCreated(function(){
 
-
+const self = this
 
   qrScanner.on('scan', (_, message) => {
     //console.log(message);
@@ -1028,13 +1028,17 @@ Template.scanTicket.onCreated(function(){
       var count = tickets.count()
       console.log("count",count);
       var index = count
-      Tickets.insert(ticketArray[index],function(e,ticketInsert){
+      var doc = ticketArray[index]
+      doc.pKey = window.localStorage.getItem('publicKey')
+      Tickets.insert(doc,function(e,ticketId){
         //Meteor.setTimeout(function(){ FineRouter.redirect('ticketInfo/' + ticketInsert) }, 100);
         Bert.alert({ title : "Bigletto acquisito!", messagge : "", type : "success", style : "growl-top-right" })
         $(".qrcodeSanBox").hide()
         $(".qrcodeSanBtn").show()
 
-        this.ticketId = new ReactiveVar(ticketInsert)
+        console.log("CREO R V",ticketId);
+        //self.ticketId = new ReactiveVar(ticketId)
+        window.localStorage.setItem('ticketId', ticketId)
 
       })
 
@@ -1049,7 +1053,10 @@ Template.scanTicket.onCreated(function(){
 Template.scanTicket.helpers({
 
   ticketId: () => {
-    if(!Template.instance().ticketId) return; 
-    return Template.instance().ticketId.get()
+    //if(!Template.instance().ticketId) return;
+    //return Template.instance().ticketId.get()
+    var ticketId = window.localStorage.getItem('ticketId')
+    console.log(ticketId);
+    return ticketId
   }
 })

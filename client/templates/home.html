@@ -1,8 +1,26 @@
 <template name="home">
   <div class="container">
     {{#isActivated}}
-      <a class="btn btn-primary" href="http://www.trenitalia.com/" target="_blank">Compra biglietto</a>
-      <button class="btn btn-primary" id="scan">Scannerizza biglietto</button>
+      <div class="">
+        <a class="btn btn-success btn-lg" href="http://www.trenitalia.com/" target="_blank" style="width:100%;">
+          <i class="fa fa-ticket"></i>
+          Compra biglietto
+        </a>
+      </div>
+      <div class="" style="margin-top:20px;">
+        <a class="btn btn-danger btn-lg" id="scan" style="width:100%;">
+          <i class="fa fa-camera"></i>
+          Scannerizza biglietto
+        </a>
+      </div>
+
+      <div class="" style="margin-top:20px;">
+        <a href="/checkin" class="btn btn-default btn-lg" style="width:100%;">
+          <i class="fa fa-train"></i>
+          Sali sul treno
+        </a>
+      </div>
+
     {{/isActivated}}
   </div>
 </template>

@@ -9,6 +9,7 @@ Template.confirmWords.onCreated(function () {
   const selectedWords = Template.currentData().selectedWords.get()
   const words = Template.currentData().words.get()
   const wordsConfirmed = Template.currentData().wordsConfirmed
+  const publicKey = Template.currentData().publicKey
 
   self.formId = Random.id()
 
@@ -34,6 +35,7 @@ Template.confirmWords.onCreated(function () {
         words.splice(index2 - 1, 1)
         const storedSecret = words.join(':') + ':' + index1 + ':' + index2
         window.localStorage.setItem('secret', storedSecret)
+        window.localStorage.setItem('publicKey', publicKey.get())
         wordsConfirmed.set(true)
       } else {
         const error = new Error('Le parole immesse non corrispondono alla selezione')

@@ -1,0 +1,15 @@
+<template name="insertWords">
+  <div class="txt">
+    Inserisci le due parole che hai scelto
+  </div>
+
+  {{#autoForm id='insertWords' schema=schema}}
+    {{> afQuickField name="word1" label=false class=""}}
+    {{> afQuickField name="word2" label=false class=""}}
+
+    <div>
+      <button type="submit" class="btn btn-primary form-control">CONFERMA</button>
+    </div>
+
+  {{/autoForm}}
+</template>

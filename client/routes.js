@@ -15,3 +15,13 @@ FineRouter.route('/ticketInfo/:ticketId', {
   action: () => FineBlazeLayout.render('main', {content: "ticketInfo"}),
   name: 'ticketInfo'
 })
+
+FineRouter.route('/checkIn', {
+  action: () => FineBlazeLayout.render('main', {content: 'checkIn'}),
+  name: 'checkIn'
+})
+
+FineRouter.route('/checkInDone', {
+  action: () => FineBlazeLayout.render('main', {content: 'checkInDone'}),
+  name: 'checkInDone'
+})
